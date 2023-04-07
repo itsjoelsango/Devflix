@@ -1,0 +1,6 @@
+framework module Pods_Devflix {
+  umbrella header "Pods-Devflix-umbrella.h"
+
+  export *
+  module * { export * }
+}
