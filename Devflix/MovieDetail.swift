@@ -1,13 +1,13 @@
 //
-//  Movie.swift
+//  MovieDetail.swift
 //  Devflix
 //
-//  Created by Jo Michael on 4/5/23.
+//  Created by Jo Michael on 4/8/23.
 //
 
 import Foundation
 
-struct Movie: Codable, Identifiable {
+struct MovieDetail: Codable {
     let id: Int
     let name: String
     let description: String
