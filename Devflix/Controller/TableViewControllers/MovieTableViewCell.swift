@@ -18,13 +18,18 @@ class MovieTableViewCell: UITableViewCell {
     
     private let baseURL = "https://image.tmdb.org/t/p/w185"
     
-    func configure(with movie: Movie) {
-        movieTitleLabel.text = movie.name
+    func configure(with movie: MovieDetail) {
+        movieTitleLabel.text = movie.title
         movieDescription.text = movie.description
         movieReleasedYearLabel.text = movie.releasedDate
         movieLanguage.text = "Language: \(movie.originalLanguage.uppercased())"
         
         let imageURL = URL(string: baseURL + movie.imageURL)
-        movieImageView.af.setImage(withURL: imageURL!)
+        if let image = imageURL {
+            movieImageView.af.setImage(withURL: image)
+        } else {
+            movieImageView.image = UIImage(systemName: "🤪")
+        }
+        
     }
 }

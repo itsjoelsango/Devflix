@@ -8,5 +8,5 @@
 import Foundation
 
 struct MovieListItem: Codable {
-    let results: [Movie]
+    let results: [MovieDetail]
 }
